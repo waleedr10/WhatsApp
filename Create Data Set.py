@@ -1,7 +1,7 @@
 import pandas as pd
 import datetime
 
-x = open(r'**','r', encoding = 'utf-8') #Replace ** with WhatsApp Text File Path and name. should be some thing like: C:\Desktop\chat.txt
+x = open(r'**','r', encoding = 'utf-8') #Replace ** with WhatsApp Text File Path and name. should be something like: C:\Desktop\chat.txt
 y = x.read()
 z=["[","]","\u200e","\u200f","\u200d♂️","\xa0","\U0001f972","\U0001f90d"]
 for i in z:
@@ -52,4 +52,4 @@ for i in range(len(content)):
     message.append(' '.join(content[i]))
 
 df = pd.DataFrame(list(zip(date, time, name, message)), columns = ['Date', 'Time', 'Name', 'message'])
-df.to_csv(r'**', encoding='UTF-8-sig', index=False) #Replace ** with where you want the CSV File to be saved and its name. should be some thing like: C:\Desktop\data.csv
+df.to_csv(r'**', encoding='UTF-8-sig', index=False) #Replace ** with where you want the CSV File to be saved and its name. should be something like: C:\Desktop\data.csv
